@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Vlad080897/todo-app.git/static/css/main.ff06aa80.css",
-    "main.js": "/Vlad080897/todo-app.git/static/js/main.5fc3ca9d.js",
-    "static/media/trebuc.woff": "/Vlad080897/todo-app.git/static/media/trebuc.aff341baa51413e48b66.woff",
-    "index.html": "/Vlad080897/todo-app.git/index.html",
-    "main.ff06aa80.css.map": "/Vlad080897/todo-app.git/static/css/main.ff06aa80.css.map",
-    "main.5fc3ca9d.js.map": "/Vlad080897/todo-app.git/static/js/main.5fc3ca9d.js.map"
+    "main.css": "/todo-app/static/css/main.75fa0249.css",
+    "main.js": "/todo-app/static/js/main.5fc3ca9d.js",
+    "static/media/trebuc.woff": "/todo-app/static/media/trebuc.aff341baa51413e48b66.woff",
+    "index.html": "/todo-app/index.html",
+    "main.75fa0249.css.map": "/todo-app/static/css/main.75fa0249.css.map",
+    "main.5fc3ca9d.js.map": "/todo-app/static/js/main.5fc3ca9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff06aa80.css",
+    "static/css/main.75fa0249.css",
     "static/js/main.5fc3ca9d.js"
   ]
 }
