@@ -1,33 +1,44 @@
 import { Input } from 'antd';
 import React, { useState } from 'react';
+import '../index.css';
 import { ITodoType } from './Todos';
-import '../index.css'
 
 const { Search } = Input;
 
 const TodoForm: React.FC<{ handle: (todo: ITodoType) => void }> = ({ handle }) => {
     const [input, setInput] = useState('')
+    const [massege, setMessage] = useState<boolean>(false)
 
     const onSearch = (value: string) => {
+        debugger
+        if (value.length === 0) {
+            setMessage(true);
+        };
         const newTodo = {
             id: Math.floor(Math.random() * 10000),
             text: value,
             completed: false
-        }
+        };
         handle(newTodo);
-    }
+        setInput('');
+    };
 
     return (
         <div className='todo_input'>
             <Search
-                placeholder="Add todo"
+                placeholder="Write your todo here"
                 enterButton="Add Todo"
-                size="middle"
+                size="large"
                 onSearch={onSearch}
                 value={input}
-                onChange={(e: React.FormEvent<HTMLInputElement>) => setInput(e.currentTarget.value)}
-                className='btn'
+                onChange={(e: React.FormEvent<HTMLInputElement>) => {
+                    setInput(e.currentTarget.value)
+                    setMessage(false);
+                }
+                }
+                className='input-text'
             />
+            {massege && <div>*Введите Ваш Todo</div>}
         </div>
     )
 }

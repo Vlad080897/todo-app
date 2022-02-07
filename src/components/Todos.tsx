@@ -5,6 +5,7 @@ import TodoForm from './TodoForm';
 const Todos = () => {
     const [todos, setTodos] = useState<Array<ITodoType>>([]);
     const handle = (todo: ITodoType) => {
+        if (!todo.text) return
         const newTodos: Array<ITodoType> = [todo, ...todos];
         setTodos(newTodos);
     }

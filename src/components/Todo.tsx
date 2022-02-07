@@ -23,17 +23,18 @@ const Todo: React.FC<ITodoProps> = ({ text, id, completed, deleteTodos, edit, se
                     }
                     }
                 />
-                <IoIosArrowDropdown size={24} color='white' onClick={() => {
+                <IoIosArrowDropdown className='edit' size={24} color='white' onClick={() => {
                     setEditMode(!editMode);
                     edit(id, newText)
                 }} />
             </div >
             :
             <div className={completed ? 'todo completed' : 'todo'} >
-                <span onClick={() => setCompleted(id)} className='todo-text'>{text}</span>
+                <span className='todo-text' >{text}</span>
                 <div>
-                    <IoIosCloseCircleOutline size={24} onClick={() => deleteTodos(id)} className='delete' />
-                    <IoIosColorWand size={24} onClick={() => {
+                    <IoIosArrowDropdown onClick={() => setCompleted(id)} size={24} color='white' className='edit' title='Finish todo' />
+                    <IoIosCloseCircleOutline size={24} onClick={() => deleteTodos(id)} className='edit' title='Delete todo' />
+                    <IoIosColorWand className='edit' title='Edit todo' size={24} onClick={() => {
                         setEditMode(!editMode)
                         setNewText(text)
                     }

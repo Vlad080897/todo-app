@@ -14,6 +14,7 @@ body {
   height: 100%;
 }
 
+
 .todo-container {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
@@ -29,8 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 30%;
-  min-height: 70%;
+  width: 50%;
+  min-height: 90%;
   max-height: auto;
   background-color: #000000;
   border: 1px solid black;
@@ -54,7 +55,10 @@ body {
 .todo_input {
   width: 70%;
   margin: 0 auto;
+}
 
+.input-text ::placeholder {
+  font-size: .8vw;
 }
 
 .input-edit {
@@ -97,9 +101,8 @@ body {
   background: linear-gradient(90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
 }
 
-.todo-edit {
-  color: black;
-  background: brown;
+.edit {
+  cursor: pointer;
 }
 
 .completed {
@@ -123,4 +126,41 @@ body {
 
 .ant-input-search>.ant-input-group>.ant-input-group-addon:last-child {
   border: 1px solid rgba(93, 12, 255, 1) !important;
+}
+
+
+@media (min-width: 240px) and (max-width: 768px) {
+  .todo-wrapper {
+    width: 80%;
+    min-height: 90%;
+    max-height: auto;
+  }
+
+  .input-text ::placeholder {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+  .todo-wrapper {
+    width: 90%;
+    min-height: 90%;
+    max-height: auto;
+  }
+
+  .input-text ::placeholder {
+    font-size: 2vw;
+  }
+
+  .ant-btn-lg {
+    font-size: 36px !important;
+  }
+
+  .ant-input-lg {
+    font-size: 36px !important;
+  }
+
+  .ant-input-search-large .ant-input-search-button {
+    height: 70px !important;
+  }
 }
