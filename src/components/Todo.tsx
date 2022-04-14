@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { IoIosArrowDropdown, IoIosCloseCircleOutline, IoIosColorWand } from "react-icons/io";
 import '../index.css';
 
-
-
 const Todo: React.FC<ITodoProps> = ({ text, id, completed, deleteTodos, edit, setCompleted }) => {
     const [editMode, setEditMode] = useState<boolean>(false);
     const [newText, setNewText] = useState<string>('')

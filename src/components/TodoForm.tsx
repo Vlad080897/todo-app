@@ -10,7 +10,6 @@ const TodoForm: React.FC<{ handle: (todo: ITodoType) => void }> = ({ handle }) =
     const [massege, setMessage] = useState<boolean>(false)
 
     const onSearch = (value: string) => {
-        debugger
         if (value.length === 0) {
             setMessage(true);
         };
@@ -38,7 +37,7 @@ const TodoForm: React.FC<{ handle: (todo: ITodoType) => void }> = ({ handle }) =
                 }
                 className='input-text'
             />
-            {massege && <div>*Введите Ваш Todo</div>}
+            {massege && <div>*Write your todo</div>}
         </div>
     )
 }

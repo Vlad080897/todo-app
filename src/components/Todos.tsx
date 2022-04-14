@@ -13,7 +13,6 @@ const Todos = () => {
         setTodos(todos.filter(todo => todo.id !== id));
     }
     const edit = (id: number, newText: string) => {
-        debugger
         setTodos(todos.map((todo) => {
             if (todo.id === id) {
                 todo.text = newText;
